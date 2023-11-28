@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://MainMenu/Settings/Buttons/FullScreen/FullscreenCheckbox.gd" type="Script" id=1]
+[ext_resource path="res://MainMenu/Settings/Buttons/FullScreen/checkbox.png" type="Texture" id=2]
+[ext_resource path="res://MainMenu/Settings/Buttons/FullScreen/spacer.png" type="Texture" id=3]
+[ext_resource path="res://MainMenu/Settings/Buttons/FullScreen/check.png" type="Texture" id=4]
+
+[sub_resource type="Theme" id=1]
+CheckBox/icons/checked = null
+CheckBox/icons/unchecked_disabled = null
+
+[node name="FullscreenCheckbox" type="HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_top = 29.0
+margin_right = 66.0
+margin_bottom = 43.0
+text = "Fullscreen"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 70.0
+margin_right = 134.0
+margin_bottom = 72.0
+texture = ExtResource( 3 )
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 138.0
+margin_right = 210.0
+margin_bottom = 72.0
+theme = SubResource( 1 )
+custom_icons/unchecked_disabled = ExtResource( 4 )
+custom_icons/unchecked = ExtResource( 2 )
+
+[connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]

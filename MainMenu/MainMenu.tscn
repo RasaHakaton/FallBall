@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://MainMenu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://MainMenu/MainMenu.tres" type="Theme" id=2]
+[ext_resource path="res://MainMenu/Settings/Settings.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MainMenu/Settings/Settings.tres" type="Theme" id=4]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+margin_top = 100.0
+margin_right = 950.0
+margin_bottom = 270.0
+theme = ExtResource( 2 )
+text = "MainMenu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0.811765, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -497.0
+margin_top = 150.0
+margin_right = 497.0
+margin_bottom = 316.0
+theme = ExtResource( 2 )
+text = "Main Menu"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -190.0
+margin_right = 300.0
+margin_bottom = 440.0
+theme = ExtResource( 4 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+margin_top = 187.0
+margin_right = 600.0
+margin_bottom = 248.0
+text = "Play"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+margin_top = 252.0
+margin_right = 600.0
+margin_bottom = 313.0
+text = "Settings"
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+margin_top = 317.0
+margin_right = 600.0
+margin_bottom = 378.0
+text = "Credits"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 382.0
+margin_right = 600.0
+margin_bottom = 443.0
+text = "Quit"
+
+[node name="Settings" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_top = -150.0
+margin_bottom = 350.0
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="apply_button_pressed" from="Settings" to="." method="_on_Settings_apply_button_pressed"]
