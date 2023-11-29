@@ -16,9 +16,19 @@ margin_right = 68.0
 margin_bottom = 27.0
 text = "Resolution"
 
-[node name="OptionButton" type="OptionButton" parent="."]
+[node name="Control" type="Control" parent="."]
 margin_left = 72.0
-margin_right = 164.0
+margin_right = 72.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton" type="OptionButton" parent="."]
+margin_left = 76.0
+margin_right = 168.0
 margin_bottom = 40.0
 text = "1280x720"
 items = [ "1280x720", null, false, 0, null, "1920x1080", null, false, 1, null, "640x360", null, false, 2, null ]
