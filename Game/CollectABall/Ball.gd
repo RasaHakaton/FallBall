@@ -38,7 +38,6 @@ func _on_DeathZone_body_entered(body):
 		rotspeed = 12
 
 func spritechoose():
-	#print (randi() % 2)
 	if randi() % 2 == 0:
 		godo.visible = true
 		box.visible = false
