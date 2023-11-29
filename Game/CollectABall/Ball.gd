@@ -1,13 +1,34 @@
-extends RigidBody2D
+extends KinematicBody2D
 
+onready var speed = 250
+onready var rotspeed = 2.5
 
 func _physics_process(delta):
-	angular_velocity = 3.5
-	
-
-#func _on_Ball_body_entered(body):
-#	queue_free()
-#
+	rotation_degrees += rotspeed
+	var yin = 1
+	var input_v = Vector2( 0, yin)
+	var move = input_v.normalized()
+	move_and_slide(move * speed, Vector2.ZERO)
+	#print(position.x)
+	#speed = speed + 0.01
+	#rotspeed = rotspeed + 0.001
 
 func _on_Player_body_entered(body):
 	position.y = -100
+	#randomize()
+	position.x = rand_range(704, 1216)
+	speed = speed + 4.5
+	if rotspeed <= 12:
+		rotspeed = rotspeed + 0.0005
+	elif rotspeed > 12:
+		rotspeed = 12
+
+func _on_DeathZone_body_entered(body):
+	position.y = -100
+	#randomize()
+	position.x = rand_range(704, 1216)
+	speed = speed + 5
+	if rotspeed <= 12:
+		rotspeed = rotspeed + 0.0008
+	elif rotspeed > 12:
+		rotspeed = 12

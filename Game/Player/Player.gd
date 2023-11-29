@@ -17,7 +17,6 @@ func _physics_process(delta):
 func _input_event(viewport, event, shape_idx ):
 	if Input.is_action_just_pressed("left_click"):
 		clicked = true
-		print("clicked")
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and not event.pressed:
