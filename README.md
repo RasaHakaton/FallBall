@@ -1,2 +1,2 @@
 # fallball
- Projekat za Hakaton 2023
+ Projekat tima Rasa za Hakaton 2023.
