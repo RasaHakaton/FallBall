@@ -182,7 +182,9 @@ position = Vector2( 960, -90 )
 [node name="Player" parent="GameplayLoop" instance=ExtResource( 1 )]
 position = Vector2( 960, 1016 )
 
+[connection signal="dying" from="Difficulty" to="." method="_on_Difficulty_dying"]
 [connection signal="dying" from="Difficulty" to="GameplayLoop" method="_on_Difficulty_dying"]
+[connection signal="dying" from="Difficulty" to="GameplayLoop/Ball" method="_on_Difficulty_dying"]
 [connection signal="body_entered" from="GameplayLoop/Playingfield/DeathZone" to="." method="_on_DeathZone_body_entered"]
 [connection signal="body_entered" from="GameplayLoop/Playingfield/DeathZone" to="GameplayLoop/Ball" method="_on_DeathZone_body_entered"]
 [connection signal="body_entered" from="GameplayLoop/Player" to="." method="_on_Player_body_entered"]
