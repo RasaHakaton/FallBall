@@ -4,16 +4,21 @@ onready var godo = $Godo
 onready var box = $Box
 onready var speed = 250
 onready var rotspeed = 2.5
+onready var gpl = get_node("..")
 
 func _ready():
 	spritechoose()
+	position.y = -90
+	position.x = rand_range(704, 1216)
 
 func _physics_process(delta):
-	rotation_degrees += rotspeed
-	var yin = 1
-	var input_v = Vector2( 0, yin)
-	var move = input_v.normalized()
-	move_and_slide(move * speed, Vector2.ZERO)
+	if gpl.visible == true:
+		rotation_degrees += rotspeed
+		var yin = 1
+		var input_v = Vector2( 0, yin)
+		var move = input_v.normalized()
+		move_and_slide(move * speed, Vector2.ZERO)
+	elif gpl.visible == false: position.y = -90
 	#print(position.x)
 	#speed = speed + 0.01
 	#rotspeed = rotspeed + 0.001

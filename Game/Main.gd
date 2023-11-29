@@ -1,7 +1,8 @@
 extends Node2D
 
 onready var score = 200
-onready var scorelabel = $Control/HBoxContainer/Score
+onready var scorelabel = $GameplayLoop/ScoreHolder/HBoxContainer/Score
+
 
 
 func _on_Player_body_entered(body):
@@ -12,3 +13,5 @@ func _on_DeathZone_body_entered(body):
 	
 func _physics_process(delta):
 	scorelabel.text = str(score)
+
+
