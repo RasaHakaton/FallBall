@@ -5,6 +5,9 @@ onready var box = $Box
 onready var speed = 250
 onready var rotspeed = 2.5
 
+func _ready():
+	spritechoose()
+
 func _physics_process(delta):
 	rotation_degrees += rotspeed
 	var yin = 1

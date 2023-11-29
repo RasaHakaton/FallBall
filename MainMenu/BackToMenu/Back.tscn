@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://MainMenu/BackToMenu/Back.gd" type="Script" id=1]
+[ext_resource path="res://MainMenu/Settings/Settings.tres" type="Theme" id=2]
+
+[node name="Back" type="Button"]
+margin_right = 12.0
+margin_bottom = 20.0
+theme = ExtResource( 2 )
+text = "Back"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="." to="." method="_on_Back_pressed"]

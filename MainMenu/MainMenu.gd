@@ -23,3 +23,7 @@ func _on_Quit_pressed():
 
 func _on_Play_pressed():
 	get_tree().change_scene('res://Game/Main.tscn')
+
+
+func _on_Credits_pressed():
+	get_tree().change_scene("res://MainMenu/Credits/Credits.tscn")
