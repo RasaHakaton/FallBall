@@ -1,6 +1,7 @@
 extends Panel
 
 onready var applied = 0
+onready var checkbox = $VBoxContainer/FullscreenCheckbox/CheckBox
 
 signal apply_button_pressed(settings)
 signal dontchange()
@@ -16,11 +17,15 @@ func _on_ResolutionSelector_resolution_changed(new_resolution: Vector2) -> void:
 	_settings.resolution = new_resolution
 func _on_FullscreenCheckbox_toggled(is_button_pressed: bool) -> void:
 	_settings.fullscreen = is_button_pressed
-	$VBoxContainer/FullscreenCheckbox/CheckBox.set_toggle_mode(true)
+	checkbox.set_toggle_mode(true)
 
 func _on_Button_pressed():
 	if applied == 0:
 		emit_signal("dontchange")
+		if checkbox.toggle_mode == true and OS.window_fullscreen == false:
+			emit_signal("uncheck")
 	elif applied == 1:
 		applied = 0
+		if checkbox.toggle_mode == true and OS.window_fullscreen == false:
+			emit_signal("uncheck")
 	visible = false

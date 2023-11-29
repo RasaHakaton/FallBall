@@ -8,7 +8,7 @@ func update_settings(settings: Dictionary) -> void:
 	if settings.resolution == Vector2(1920, 1080) and OS.get_screen_size() == Vector2(1920, 1080):
 		OS.window_fullscreen = true
 	else: OS.window_fullscreen = settings.fullscreen
-# Call the `update_settings` function when the user presses the button
+
 func _on_Settings_apply_button_pressed(settings) -> void:
 	update_settings(settings)
 

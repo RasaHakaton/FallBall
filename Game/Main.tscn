@@ -162,7 +162,7 @@ margin_bottom = 93.0
 theme = SubResource( 4 )
 text = "Score:"
 
-[node name="Score" type="Label" parent="GameplayLoop/ScoreHolder/HBoxContainer"]
+[node name="Score" type="Label" parent="GameplayLoop/ScoreHolder/HBoxContainer" groups=["Savable"]]
 margin_left = 193.0
 margin_right = 231.0
 margin_bottom = 93.0

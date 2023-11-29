@@ -2,6 +2,7 @@ extends HBoxContainer
 tool
 onready var checkbox = $CheckBox
 
+signal passdown()
 signal toggled(is_button_pressed)
 
 export var title := "" setget set_title
@@ -17,3 +18,7 @@ func set_title(value: String) -> void:
 	if not label:
 		yield(self, "ready")
 	label.text = title
+
+
+func _on_Settings_uncheck():
+	emit_signal("passdown")
