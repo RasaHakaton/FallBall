@@ -20,12 +20,27 @@ func _on_FullscreenCheckbox_toggled(is_button_pressed: bool) -> void:
 	checkbox.set_toggle_mode(true)
 
 func _on_Button_pressed():
+	#if OS.window_fullscreen == true:
+	#	checkbox.set_toggle_mode(true)
+	#	checkbox.toggle_mode = true
+	#	print ("whistle1")
 	if applied == 0:
 		emit_signal("dontchange")
 		if checkbox.toggle_mode == true and OS.window_fullscreen == false:
 			emit_signal("uncheck")
+		#if OS.window_fullscreen == true and checkbox.toggle_mode == false:
+		#	checkbox.toggle_mode(true)
+		#	checkbox.toggle_mode = true
+		#	print ("whistle2")
 	elif applied == 1:
 		applied = 0
 		if checkbox.toggle_mode == true and OS.window_fullscreen == false:
 			emit_signal("uncheck")
+		#if OS.window_fullscreen == true and checkbox.toggle_mode == false:
+		#	checkbox.toggle_mode(true)
+		#	checkbox.toggle_mode = true
+		#	print ("whistle3")
+	#if OS.window_fullscreen == true:
+	#	checkbox.set_toggle_mode(true)
+	#	checkbox.toggle_mode = true
 	visible = false

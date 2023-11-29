@@ -29,26 +29,28 @@ func _physics_process(delta):
 	#rotspeed = rotspeed + 0.001
 
 func _on_Player_body_entered(body):
-	position.y = -100
-	#randomize()
-	position.x = rand_range(704, 1216)
-	spritechoose()
-	speed = speed + sfp
-	if rotspeed <= rotmax:
-		rotspeed = rotspeed + rfp
-	elif rotspeed > rotmax:
-		rotspeed = rotmax
+	if body.name == "Ball":
+		position.y = -100
+		#randomize()
+		position.x = rand_range(704, 1216)
+		spritechoose()
+		speed = speed + sfp
+		if rotspeed <= rotmax:
+			rotspeed = rotspeed + rfp
+		elif rotspeed > rotmax:
+			rotspeed = rotmax
 
 func _on_DeathZone_body_entered(body):
-	position.y = -100
-	#randomize()
-	position.x = rand_range(704, 1216)
-	spritechoose()
-	speed = speed + sfd
-	if rotspeed <= rotmax:
-		rotspeed = rotspeed + rfd
-	elif rotspeed > rotmax:
-		rotspeed = rotmax
+	if body.name == "Ball":
+		position.y = -100
+		#randomize()
+		position.x = rand_range(704, 1216)
+		spritechoose()
+		speed = speed + sfd
+		if rotspeed <= rotmax:
+			rotspeed = rotspeed + rfd
+		elif rotspeed > rotmax:
+			rotspeed = rotmax
 
 func spritechoose():
 	if randi() % 2 == 0:
