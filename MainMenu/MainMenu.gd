@@ -11,7 +11,12 @@ func update_settings(settings: Dictionary) -> void:
 	else: OS.window_fullscreen = settings.fullscreen
 	
 func _ready():
-	FadeInBall.play("FadeOutBall")
+	if start.firstboot == 0:
+		$TextureRect2.visible = false
+	if start.firstboot == 1:
+		$TextureRect2.visible = true
+		FadeInBall.play("FadeOutBall")
+	start.firstboot = 0
 
 func _on_Settings_apply_button_pressed(settings) -> void:
 	update_settings(settings)

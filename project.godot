@@ -18,7 +18,7 @@ config/icon="res://MainMenu/Settings/Buttons/FullScreen/checkbox_selected.png"
 
 [autoload]
 
-ExitAndF4Hand="*res://ExitAndF4Hand.gd"
+start="*res://Start.gd"
 
 [display]
 
