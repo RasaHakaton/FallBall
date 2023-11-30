@@ -12,6 +12,7 @@ var _settings := {resolution = Vector2(1280, 720), fullscreen = false}
 
 func _on_Apply_pressed() -> void:
 	emit_signal("apply_button_pressed", _settings)
+	$VBoxContainer/Apply/ApplyAudio.play()
 	applied = 1
 	$Applied/Label.text = "Yes"
 func _on_ResolutionSelector_resolution_changed(new_resolution: Vector2) -> void:
@@ -27,6 +28,7 @@ func _on_FullscreenCheckbox_toggled(is_button_pressed: bool) -> void:
 	$Applied.visible = true
 
 func _on_Button_pressed():
+	GBSFX.play()
 	if applied == 0:
 		#emit_signal("dontchange")
 		$Applied/Label.text = "No"
@@ -34,6 +36,7 @@ func _on_Button_pressed():
 			emit_signal("uncheck")
 	elif applied == 1:
 		$Applied/Label.text = "Yes"
+		start.save_data()
 		applied = 0
 		if checkbox.toggle_mode == true and OS.window_fullscreen == false:
 			emit_signal("uncheck")

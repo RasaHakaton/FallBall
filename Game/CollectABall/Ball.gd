@@ -12,6 +12,7 @@ export onready var rotmax = 12
 onready var gpl = get_node("..")
 
 func _ready():
+	randomize()
 	spritechoose()
 	position.y = -90
 	position.x = rand_range(704, 1216)

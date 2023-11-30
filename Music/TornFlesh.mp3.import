@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TornFlesh.mp3-1975f4846ee76f28277347b800e2178c.mp3str"
+
+[deps]
+
+source_file="res://Music/TornFlesh.mp3"
+dest_files=[ "res://.import/TornFlesh.mp3-1975f4846ee76f28277347b800e2178c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -11,6 +11,8 @@ func update_settings(settings: Dictionary) -> void:
 	else: OS.window_fullscreen = settings.fullscreen
 	
 func _ready():
+	if mainmusic.playing == false:
+		mainmusic.play()
 	if start.firstboot == 0:
 		$TextureRect2.visible = false
 	if start.firstboot == 1:
@@ -20,19 +22,24 @@ func _ready():
 
 func _on_Settings_apply_button_pressed(settings) -> void:
 	update_settings(settings)
-
+	start.save_data()
 
 func _on_Settings_pressed():
+	GBSFX.play()
 	settings.visible = true
 
 
 func _on_Quit_pressed():
+	GBSFX.play()
+	start.save_data()
 	get_tree().quit()
 
 
 func _on_Play_pressed():
+	GBSFX.play()
 	get_tree().change_scene('res://Game/Main.tscn')
 
 
 func _on_Credits_pressed():
+	GBSFX.play()
 	get_tree().change_scene("res://MainMenu/Credits/Credits.tscn")

@@ -201,6 +201,27 @@ margin_bottom = 93.0
 theme = SubResource( 6 )
 text = "3"
 
+[node name="HighBox" type="HBoxContainer" parent="GameplayLoop/ScoreHolder"]
+margin_top = 279.0
+margin_right = 231.0
+margin_bottom = 372.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GameplayLoop/ScoreHolder/HighBox"]
+margin_right = 327.0
+margin_bottom = 93.0
+theme = SubResource( 4 )
+text = "HighScore:"
+
+[node name="Highscore" type="Label" parent="GameplayLoop/ScoreHolder/HighBox" groups=["Savable"]]
+margin_left = 331.0
+margin_right = 369.0
+margin_bottom = 93.0
+theme = SubResource( 6 )
+text = "0"
+
 [node name="InfoPanel" type="Control" parent="GameplayLoop"]
 margin_top = 125.0
 margin_right = 640.0
@@ -238,10 +259,8 @@ Use the mouse or the
 press shift to sprint
 while using arrows;
 
-For every ball you catch
-you score 50 points, for
-every ball that you miss
-you lose 100;"
+For every ball you miss
+you lose 1 life;"
 align = 1
 clip_text = true
 __meta__ = {
@@ -278,7 +297,11 @@ shape = SubResource( 2 )
 position = Vector2( 960, -90 )
 
 [node name="Player" parent="GameplayLoop" instance=ExtResource( 1 )]
-position = Vector2( 960, 1016 )
+position = Vector2( 960, 1056 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
 
 [connection signal="dying" from="Difficulty" to="." method="_on_Difficulty_dying"]
 [connection signal="dying" from="Difficulty" to="GameplayLoop" method="_on_Difficulty_dying"]

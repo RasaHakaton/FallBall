@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CultoftheSkull.mp3-38af661a37eb9f776df57b14a0dd18c9.mp3str"
+
+[deps]
+
+source_file="res://Music/CultoftheSkull.mp3"
+dest_files=[ "res://.import/CultoftheSkull.mp3-38af661a37eb9f776df57b14a0dd18c9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -10,15 +10,18 @@ config_version=4
 
 [application]
 
-config/name="fallball"
+config/name="FallBall"
 run/main_scene="res://MainMenu/MainMenu.tscn"
 boot_splash/image="res://ballsbackground.png"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
-config/icon="res://MainMenu/Settings/Buttons/FullScreen/checkbox_selected.png"
+config/icon="res://logo_145.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
-start="*res://Start.gd"
+start="*res://Global/Start.gd"
+mainmusic="*res://Global/MainMusic.tscn"
+GBSFX="*res://Global/GBSFX.tscn"
 
 [display]
 
