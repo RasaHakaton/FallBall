@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TakeTheLead.mp3-f1f3a4aac79877ffac0c3f6ad28abf3d.mp3str"
+
+[deps]
+
+source_file="res://Music/TakeTheLead.mp3"
+dest_files=[ "res://.import/TakeTheLead.mp3-f1f3a4aac79877ffac0c3f6ad28abf3d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

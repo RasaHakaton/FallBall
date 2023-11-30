@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://MainMenu/MainMenu.tres" type="Theme" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://MainMenu/MainMenuButtons.tres" type="Theme" id=4]
 [ext_resource path="res://MainMenu/ballsblur.png" type="Texture" id=5]
 [ext_resource path="res://ballsbackground.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/Carlito-Regular.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "FadeOutBall"
@@ -216,7 +217,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=5]
 resource_name = "FadeOut"
-length = 0.5
+length = 0.75
 tracks/0/type = "value"
 tracks/0/path = NodePath("VBoxContainer:modulate")
 tracks/0/interp = 1
@@ -268,6 +269,14 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
+
+[sub_resource type="DynamicFont" id=7]
+size = 79
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 52
+font_data = ExtResource( 7 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -386,6 +395,49 @@ margin_bottom = 350.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FadeOut = SubResource( 5 )
 anims/RESET = SubResource( 6 )
+
+[node name="Version" type="Label" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -165.0
+margin_top = -98.0
+margin_right = -20.0
+custom_fonts/font = SubResource( 7 )
+text = "V1.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TeamRasa" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0.380392 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -74.0
+margin_right = 279.0
+margin_bottom = -10.0
+custom_fonts/font = SubResource( 8 )
+text = "©TeamRasa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Version1" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0.380392 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 1805.0
+margin_top = -74.0
+margin_right = 1900.0
+margin_bottom = -10.0
+custom_fonts/font = SubResource( 8 )
+text = "V1.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Settings_pressed"]

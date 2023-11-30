@@ -11,11 +11,12 @@ config_version=4
 [application]
 
 config/name="FallBall"
+config/description="A game about collecting falling balls."
 run/main_scene="res://MainMenu/MainMenu.tscn"
 boot_splash/image="res://ballsbackground.png"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
-config/icon="res://logo_145.png"
-config/windows_native_icon="res://icon.ico"
+config/icon="res://logo_icon.png"
+config/windows_native_icon="res://logo_icon256.ico"
 
 [autoload]
 
@@ -55,6 +56,11 @@ sprint={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777237,"unicode":0,"echo":false,"script":null)
  ]
 }
+clearsave={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":125,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [physics]
 
@@ -62,4 +68,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Temp/default_env.tres"

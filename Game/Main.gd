@@ -23,7 +23,8 @@ var music = {
 	"metal": preload("res://Music/CultoftheSkull.mp3"),
 	"cipher": preload("res://Music/Cipher.mp3"),
 	"wallpaper": preload("res://Music/Wallpaper.mp3"),
-	"thereitis": preload("res://Music/ThereItIs.mp3")
+	"thereitis": preload("res://Music/ThereItIs.mp3"),
+	"takethelead": preload("res://Music/TakeTheLead.mp3")
 	}
 
 func _ready():
@@ -41,8 +42,8 @@ func _process(delta):
 
 func _on_Player_body_entered(body):
 	if body.name == "Ball":
-		score = score + 50
-		if (score - scorog) == 50*20:
+		score = score + 1
+		if (score - scorog) == 20:
 			if lives < 3:
 				lives = lives + 1
 			scorog = score
@@ -108,9 +109,21 @@ func choose_song():
 		musicp.volume_db = -5
 		musicp.play()
 	if dif == 3 and musicp.stream != music.thereitis:
-		musicp.stream = music.thereitis
-		musicp.volume_db = -10
-		musicp.play()
+		if musicp.stream != music.takethelead:
+			randomize()
+			if randi() % 2 == 0:
+				musicp.stream = music.thereitis
+			else: musicp.stream = music.takethelead
+			musicp.volume_db = -10
+			musicp.play()
+	if dif == 3 and musicp.stream != music.takethelead:
+		if musicp.stream != music.thereitis:
+			randomize()
+			if randi() % 2 == 0:
+				musicp.stream = music.thereitis
+			else: musicp.stream = music.takethelead
+			musicp.volume_db = -10
+			musicp.play()
 func hsdiff():
 	if dif == 1:
 		localhs = start.sdata.highscore.easy

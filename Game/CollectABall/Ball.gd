@@ -57,13 +57,15 @@ func _on_DeathZone_body_entered(body):
 
 func spritechoose():
 	randomize()
-	var chosen = randi() % 4
+	var chosen = randi() % 15
 	if chosen == 0:
+		godo.modulate = Color(1, 1, 1)
 		shape.shape.radius = 60
 		godo.visible = true
 		box.visible = false
 		tennis.visible = false
 	elif chosen == 1:
+		box.modulate = Color(1, 1, 1)
 		shape.shape.radius = 60
 		box.visible = true
 		godo.visible = false
@@ -76,11 +78,76 @@ func spritechoose():
 		godo.visible = false
 	elif chosen == 3:
 		shape.shape.radius = 60
-		tennis.modulate = Color(1, 0, 0)
+		tennis.modulate = Color(1, 0, 0) #red tennisball
 		tennis.visible = true
 		box.visible = false
 		godo.visible = false
-
+	elif chosen == 4:
+		box.modulate = Color(1, 0, 0) #red football
+		shape.shape.radius = 60
+		box.visible = true
+		godo.visible = false
+		tennis.visible = false
+	elif chosen == 5:
+		box.modulate = Color(1, 1, 0) #yellow football
+		shape.shape.radius = 60
+		box.visible = true
+		godo.visible = false
+		tennis.visible = false
+	elif chosen == 6:
+		shape.shape.radius = 60
+		tennis.modulate = Color(1, 1, 0) #yellow tennisball
+		tennis.visible = true
+		box.visible = false
+		godo.visible = false
+	elif chosen == 7:
+		shape.shape.radius = 60
+		tennis.modulate = Color(0, 1, 0) #greener tennisball
+		tennis.visible = true
+		box.visible = false
+		godo.visible = false
+	if chosen == 8:
+		godo.modulate = Color(1, 1, 0) #yellow basket
+		shape.shape.radius = 60
+		godo.visible = true
+		box.visible = false
+		tennis.visible = false
+	if chosen == 9:
+		godo.modulate = Color(0, 1, 1) #green bask
+		shape.shape.radius = 60
+		godo.visible = true
+		box.visible = false
+		tennis.visible = false
+	elif chosen == 10:
+		shape.shape.radius = 60
+		tennis.modulate = Color(0, 0.3, 1) #blue tennisball
+		tennis.visible = true
+		box.visible = false
+		godo.visible = false
+	if chosen == 11:
+		godo.modulate = Color(1, 0, 1) #red bask
+		shape.shape.radius = 60
+		godo.visible = true
+		box.visible = false
+		tennis.visible = false
+	elif chosen == 12:
+		box.modulate = Color(0, 0.5, 1) #blue football
+		shape.shape.radius = 60
+		box.visible = true
+		godo.visible = false
+		tennis.visible = false
+	elif chosen == 13:
+		box.modulate = Color(1, 0, 1) #pink football
+		shape.shape.radius = 60
+		box.visible = true
+		godo.visible = false
+		tennis.visible = false
+	if chosen == 14:
+		godo.modulate = Color(1, 1, 1)
+		shape.shape.radius = 60
+		godo.visible = true
+		box.visible = false
+		tennis.visible = false
 
 func _on_Difficulty_dying(difficulty):
 	if difficulty == 2:
