@@ -15,6 +15,9 @@ func _on_Apply_pressed() -> void:
 	$VBoxContainer/Apply/ApplyAudio.play()
 	applied = 1
 	$Applied/Label.text = "Yes"
+	start.sdata.resolution = _settings.resolution
+	start.sdata.fullscreen = _settings.fullscreen
+	start.save_data()
 func _on_ResolutionSelector_resolution_changed(new_resolution: Vector2) -> void:
 	_settings.resolution = new_resolution
 	applied = 0
@@ -42,6 +45,9 @@ func _on_Button_pressed():
 			emit_signal("uncheck")
 	
 	visible = false
+
+func _process(delta):
+	$CurrentRes/res.text = str(OS.window_size)
 
 func _physics_process(delta):
 	#if applied == 0:

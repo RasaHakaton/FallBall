@@ -2,7 +2,9 @@ extends KinematicBody2D
 
 onready var godo = $Godo
 onready var box = $Box
+onready var tennis = $tennis
 onready var speed = 250
+onready var shape = $CollisionShape2D
 onready var rotspeed = 2.5
 export onready var sfp = 4.5
 export onready var sfd = 5
@@ -54,11 +56,29 @@ func _on_DeathZone_body_entered(body):
 			rotspeed = rotmax
 
 func spritechoose():
-	if randi() % 2 == 0:
+	randomize()
+	var chosen = randi() % 4
+	if chosen == 0:
+		shape.shape.radius = 60
 		godo.visible = true
 		box.visible = false
-	elif randi() % 2 == 1:
+		tennis.visible = false
+	elif chosen == 1:
+		shape.shape.radius = 60
 		box.visible = true
+		godo.visible = false
+		tennis.visible = false
+	elif chosen == 2:
+		tennis.modulate = Color(1, 1, 1)
+		shape.shape.radius = 60
+		tennis.visible = true
+		box.visible = false
+		godo.visible = false
+	elif chosen == 3:
+		shape.shape.radius = 60
+		tennis.modulate = Color(1, 0, 0)
+		tennis.visible = true
+		box.visible = false
 		godo.visible = false
 
 

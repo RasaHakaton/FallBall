@@ -37,10 +37,10 @@ __meta__ = {
 [node name="Applied" type="HBoxContainer" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0.368627 )
-margin_left = 58.0
-margin_top = 434.0
-margin_right = 296.0
-margin_bottom = 472.0
+margin_left = 28.0
+margin_top = 20.0
+margin_right = 266.0
+margin_bottom = 58.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -57,6 +57,31 @@ __meta__ = {
 [node name="Label" type="Label" parent="Applied"]
 margin_left = 121.0
 margin_right = 121.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 3 )
+
+[node name="CurrentRes" type="HBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0.368627 )
+margin_left = 28.0
+margin_top = 438.0
+margin_right = 280.0
+margin_bottom = 476.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="CurrentRes"]
+margin_right = 248.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 2 )
+text = "*Current resolution:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="res" type="Label" parent="CurrentRes"]
+margin_left = 252.0
+margin_right = 252.0
 margin_bottom = 38.0
 custom_fonts/font = SubResource( 3 )
 

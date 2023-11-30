@@ -2,6 +2,7 @@ extends Node
 
 var i = 1
 var firstboot = 1
+var fadeingame = 1
 const SAVE_FILE = "user://data.save"
 var sdata = {}
 
@@ -17,7 +18,7 @@ func load_data():
 		sdata = {
 			"resolution": Vector2(1280, 720),
 			"fullscreen": false,
-			"highscore": 0
+			"highscore": {"easy": 0, "normal": 0, "hard": 0, "uv": 0,"nightmare": 0}
 		}
 		save_data()
 	file.open(SAVE_FILE, file.READ)

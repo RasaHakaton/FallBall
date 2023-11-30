@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ThereItIs.mp3-186350ead5409d04a0df1c354f85b4f6.mp3str"
+
+[deps]
+
+source_file="res://Music/ThereItIs.mp3"
+dest_files=[ "res://.import/ThereItIs.mp3-186350ead5409d04a0df1c354f85b4f6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
