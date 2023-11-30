@@ -1,12 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://MainMenu/Credits/Credits.tres" type="Theme" id=1]
 [ext_resource path="res://MainMenu/MainMenu.tres" type="Theme" id=2]
 [ext_resource path="res://MainMenu/BackToMenu/Back.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Fonts/MotleyForcesRegular-w1rZ3.ttf" type="DynamicFontData" id=4]
 
+[sub_resource type="DynamicFont" id=6]
+size = 209
+use_filter = true
+font_data = ExtResource( 4 )
+
 [sub_resource type="DynamicFont" id=1]
 size = 52
+use_filter = true
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFontData" id=4]
@@ -47,7 +53,7 @@ margin_left = -240.0
 margin_top = 140.0
 margin_right = 240.0
 margin_bottom = 306.0
-theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 6 )
 text = "Rasa"
 align = 1
 valign = 1

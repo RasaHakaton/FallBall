@@ -43,10 +43,12 @@ func _on_Quit_pressed():
 func _on_Play_pressed():
 	GBSFX.play()
 	anim.play("FadeOut")
-	get_tree().change_scene('res://Game/Main.tscn')
 
 
 func _on_Credits_pressed():
 	GBSFX.play()
-	anim.play("FadeOut")
 	get_tree().change_scene("res://MainMenu/Credits/Credits.tscn")
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	get_tree().change_scene('res://Game/Main.tscn')

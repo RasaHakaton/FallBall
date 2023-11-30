@@ -266,7 +266,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ) ]
 }
 
 [node name="MainMenu" type="Control"]
@@ -325,7 +325,6 @@ anims/RESET = SubResource( 2 )
 anims/Start = SubResource( 4 )
 
 [node name="Title" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -370.0
@@ -393,3 +392,4 @@ anims/RESET = SubResource( 6 )
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="apply_button_pressed" from="Settings" to="." method="_on_Settings_apply_button_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
