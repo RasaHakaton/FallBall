@@ -223,13 +223,16 @@ theme = SubResource( 8 )
 text = "Hold ESC to quit;
 
 Use the mouse or the
- arrow keys to play;
+ arrow keys to play,
+press shift to sprint
+while using arrows;
 
 For every ball you catch
 you score 50 points, for
-every ball that falls you
-lose 100;"
+every ball that you miss
+you lose 100;"
 align = 1
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

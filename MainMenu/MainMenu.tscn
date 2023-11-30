@@ -1,9 +1,42 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://MainMenu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://MainMenu/MainMenu.tres" type="Theme" id=2]
 [ext_resource path="res://MainMenu/Settings/Settings.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MainMenu/MainMenuButtons.tres" type="Theme" id=4]
+[ext_resource path="res://MainMenu/ballsblur.png" type="Texture" id=5]
+[ext_resource path="res://ballsbackground.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "FadeOutBall"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -33,6 +66,28 @@ color = Color( 0, 0.811765, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FadeInBall" type="AnimationPlayer" parent="TextureRect2"]
+anims/FadeOutBall = SubResource( 1 )
+anims/RESET = SubResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
