@@ -438,7 +438,7 @@ theme = ExtResource( 1 )
 text = "Roman Jelenković
 Anja Todorović
 Sofija Matović
-Anđela Leoni:"
+Anđela Leoni"
 align = 1
 
 [node name="Spacer2" type="Control" parent="HBoxContainer3"]

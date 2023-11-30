@@ -16,7 +16,7 @@ run/main_scene="res://MainMenu/MainMenu.tscn"
 boot_splash/image="res://ballsbackground.png"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://logo_icon.png"
-config/windows_native_icon="res://logo_icon256.ico"
+config/windows_native_icon="res://gameicon.ico"
 
 [autoload]
 
