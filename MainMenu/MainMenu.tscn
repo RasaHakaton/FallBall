@@ -281,6 +281,8 @@ font_data = ExtResource( 7 )
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -840.0
+margin_bottom = 1320.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -308,8 +310,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1920.0
+margin_left = 1080.0
+margin_right = 3480.0
 margin_bottom = 1080.0
+rect_rotation = 90.0
 texture = ExtResource( 5 )
 expand = true
 __meta__ = {
@@ -416,9 +420,9 @@ modulate = Color( 1, 1, 1, 0.380392 )
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 20.0
-margin_top = -74.0
+margin_top = -274.0
 margin_right = 279.0
-margin_bottom = -10.0
+margin_bottom = -210.0
 custom_fonts/font = SubResource( 8 )
 text = "©TeamRasa"
 __meta__ = {
@@ -427,17 +431,23 @@ __meta__ = {
 
 [node name="Version1" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0.380392 )
+anchor_left = 1.0
 anchor_top = 1.0
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1805.0
-margin_top = -74.0
-margin_right = 1900.0
-margin_bottom = -10.0
+margin_left = -115.0
+margin_top = -264.0
+margin_right = -20.0
+margin_bottom = -200.0
 custom_fonts/font = SubResource( 8 )
 text = "V1.1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 960, 540 )
+current = true
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_Settings_pressed"]

@@ -16,7 +16,7 @@ func load_data():
 	var file = File.new()
 	if not file.file_exists(SAVE_FILE):
 		sdata = {
-			"resolution": Vector2(1280, 720),
+			"resolution": Vector2(720, 1280),
 			"fullscreen": false,
 			"highscore": {"easy": 0, "normal": 0, "hard": 0, "uv": 0,"nightmare": 0}
 		}
@@ -33,7 +33,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_pressed("clearsave"):
 		sdata = {
-			"resolution": Vector2(1280, 720),
+			"resolution": Vector2(720, 1280),
 			"fullscreen": false,
 			"highscore": {"easy": 0, "normal": 0, "hard": 0, "uv": 0,"nightmare": 0}
 		}
