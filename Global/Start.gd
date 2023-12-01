@@ -29,6 +29,12 @@ func _ready():
 	load_data()
 
 func _process(delta):
+	#var Event = make_input_local()
+	#if event.type == InputEvent.SCREEN_TOUCH:
+	#	var left_click =  InputEventAction.new()
+	#	left_click.action = "left_click"
+	#	left_click.pressed = true
+	#	Input.parse_input_event(left_click)
 	if Input.is_action_pressed("clearsave"):
 		sdata = {
 			"resolution": Vector2(1080/2, 2400/2),
