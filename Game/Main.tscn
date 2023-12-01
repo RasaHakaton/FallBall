@@ -100,10 +100,10 @@ font_data = ExtResource( 3 )
 default_font = SubResource( 7 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 320, 540 )
+extents = Vector2( 320, 1422 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 320, 100 )
+extents = Vector2( 542, 122 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 4 )
@@ -121,7 +121,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect5" type="TextureRect" parent="."]
+visible = false
 margin_right = 1920.0
 margin_bottom = 1080.0
 mouse_filter = 2
@@ -131,12 +132,35 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 1080.0
+margin_right = 3480.0
+margin_bottom = 1080.0
+rect_rotation = 90.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1080.0
+margin_bottom = 2400.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureRect2" type="TextureRect" parent="."]
-margin_top = -491.0
-margin_right = 2048.0
-margin_bottom = 1557.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -660.0
+margin_right = 1740.0
+margin_bottom = 2400.0
 mouse_filter = 2
 texture = ExtResource( 12 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -146,17 +170,21 @@ anims/FadeIn = SubResource( 12 )
 anims/RESET = SubResource( 13 )
 
 [node name="Difficulty" parent="." instance=ExtResource( 6 )]
-margin_left = 560.0
-margin_top = 290.0
-margin_right = 1360.0
-margin_bottom = 790.0
+margin_left = 140.0
+margin_top = 950.0
+margin_right = 940.0
+margin_bottom = 1450.0
 
 [node name="TryAgain" type="Panel" parent="."]
 visible = false
-margin_left = 560.0
-margin_top = 290.0
-margin_right = 1360.0
-margin_bottom = 790.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 140.0
+margin_top = 950.0
+margin_right = 940.0
+margin_bottom = 1450.0
 theme = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -207,7 +235,6 @@ margin_right = 116.0
 margin_bottom = 86.0
 
 [node name="GameplayLoop" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="GameplayLoop"]
@@ -218,28 +245,34 @@ texture = ExtResource( 11 )
 
 [node name="ColorRect2" type="ColorRect" parent="GameplayLoop"]
 modulate = Color( 1, 1, 1, 0.52549 )
-anchor_right = 1.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 640.0
-margin_right = 1280.0
-margin_bottom = 1080.0
+margin_right = 1080.0
+margin_bottom = 2400.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScoreHolder" type="Control" parent="GameplayLoop"]
-margin_left = 1330.0
-margin_top = 50.0
-margin_right = 1730.0
-margin_bottom = 150.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 340.0
+margin_top = 100.0
+margin_right = 740.0
+margin_bottom = 356.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GameplayLoop/ScoreHolder"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -115.5
+margin_right = 115.5
+margin_bottom = 93.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -249,6 +282,7 @@ margin_right = 189.0
 margin_bottom = 93.0
 theme = SubResource( 4 )
 text = "Score:"
+align = 1
 
 [node name="Score" type="Label" parent="GameplayLoop/ScoreHolder/HBoxContainer" groups=["Savable"]]
 margin_left = 193.0
@@ -258,9 +292,14 @@ theme = SubResource( 6 )
 text = "0"
 
 [node name="LiveBox" type="HBoxContainer" parent="GameplayLoop/ScoreHolder"]
-margin_top = 93.0
-margin_right = 193.0
-margin_bottom = 186.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -105.5
+margin_top = -46.5
+margin_right = 105.5
+margin_bottom = 46.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -270,6 +309,7 @@ margin_right = 169.0
 margin_bottom = 93.0
 theme = SubResource( 4 )
 text = "Lives:"
+align = 1
 
 [node name="Lives" type="Label" parent="GameplayLoop/ScoreHolder/LiveBox"]
 margin_left = 173.0
@@ -277,11 +317,16 @@ margin_right = 211.0
 margin_bottom = 93.0
 theme = SubResource( 6 )
 text = "3"
+align = 1
 
 [node name="HighBox" type="HBoxContainer" parent="GameplayLoop/ScoreHolder"]
-margin_top = 279.0
-margin_right = 231.0
-margin_bottom = 372.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -184.5
+margin_top = -93.0
+margin_right = 184.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -300,6 +345,7 @@ theme = SubResource( 6 )
 text = "0"
 
 [node name="InfoPanel" type="Control" parent="GameplayLoop"]
+visible = false
 margin_top = 125.0
 margin_right = 640.0
 margin_bottom = 1080.0
@@ -353,6 +399,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameplayLoop/Playingfield/Wall1"]
+position = Vector2( -640, 442 )
 shape = SubResource( 1 )
 
 [node name="Wall2" type="StaticBody2D" parent="GameplayLoop/Playingfield"]
@@ -362,19 +409,23 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameplayLoop/Playingfield/Wall2"]
+position = Vector2( -200, 452 )
 shape = SubResource( 1 )
 
 [node name="DeathZone" type="Area2D" parent="GameplayLoop/Playingfield"]
 position = Vector2( 960, 1250 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameplayLoop/Playingfield/DeathZone"]
+position = Vector2( -418, 1300 )
 shape = SubResource( 2 )
 
 [node name="Ball" parent="GameplayLoop" instance=ExtResource( 2 )]
-position = Vector2( 960, -90 )
+position = Vector2( 542, -96 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="Player" parent="GameplayLoop" instance=ExtResource( 1 )]
-position = Vector2( 960, 1056 )
+position = Vector2( 542, 2320 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 

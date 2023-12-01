@@ -17,7 +17,7 @@ func _ready():
 	randomize()
 	spritechoose()
 	position.y = -90
-	position.x = rand_range(704, 1216)
+	position.x = rand_range(0, 1080)
 
 func _physics_process(delta):
 	if gpl.visible == true:
