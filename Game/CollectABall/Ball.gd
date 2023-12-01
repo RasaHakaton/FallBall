@@ -158,6 +158,12 @@ func _on_Difficulty_dying(difficulty):
 		rfp = rfp * 2
 		rfd = rfd * 2
 		rotmax = 14
+		#mobile only
+		speed = speed * 1.5
+		sfp = sfp * 2
+		sfd = sfd * 2
+		rfp = rfp * 2
+		rfd = rfd * 2
 	if difficulty == 3:
 		speed = 310
 		rotspeed = 3.1
@@ -166,6 +172,12 @@ func _on_Difficulty_dying(difficulty):
 		rfp = rfp * 3.5
 		rfd = rfd * 3.5 
 		rotmax = 18
+		#mobile only
+		speed = speed * 1.5
+		sfp = sfp * 2
+		sfd = sfd * 2
+		rfp = rfp * 2
+		rfd = rfd * 2
 	if difficulty == 4:
 		speed = 340
 		rotspeed = 3.4
@@ -174,6 +186,12 @@ func _on_Difficulty_dying(difficulty):
 		rfp = rfp * 7.5
 		rfd = rfd * 8.5 
 		rotmax = 20
+		#mobile only
+		speed = speed * 1.5
+		sfp = sfp * 2
+		sfd = sfd * 2
+		rfp = rfp * 2
+		rfd = rfd * 2
 	if difficulty == 5:
 		speed = 390
 		rotspeed = 4.5
@@ -182,3 +200,9 @@ func _on_Difficulty_dying(difficulty):
 		rfp = rfp * 10
 		rfd = rfd * 15
 		rotmax = 69
+		#mobile only
+		speed = speed * 1.5
+		sfp = sfp * 2
+		sfd = sfd * 2
+		rfp = rfp * 2
+		rfd = rfd * 2

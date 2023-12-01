@@ -137,6 +137,7 @@ margin_left = 1080.0
 margin_right = 3480.0
 margin_bottom = 1080.0
 rect_rotation = 90.0
+mouse_filter = 2
 texture = ExtResource( 10 )
 expand = true
 __meta__ = {
@@ -146,6 +147,7 @@ __meta__ = {
 [node name="Control" type="Control" parent="."]
 margin_right = 1080.0
 margin_bottom = 2400.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -263,6 +265,7 @@ margin_left = 340.0
 margin_top = 100.0
 margin_right = 740.0
 margin_bottom = 356.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -349,6 +352,7 @@ visible = false
 margin_top = 125.0
 margin_right = 640.0
 margin_bottom = 1080.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
