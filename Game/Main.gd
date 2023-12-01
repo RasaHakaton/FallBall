@@ -48,6 +48,8 @@ func _on_Player_body_entered(body):
 				lives = lives + 1
 			scorog = score
 		init = false
+		if dif == 5 and $GameplayLoop/Playingfield/DeathZone.position.y < 2001:
+			$GameplayLoop/Playingfield/DeathZone.position.y = $GameplayLoop/Playingfield/DeathZone.position.y + 2
 		
 		sfxp.stream = sfx.collect
 		sfxp.play()

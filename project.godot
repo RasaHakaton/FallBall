@@ -26,13 +26,11 @@ GBSFX="*res://Global/GBSFX.tscn"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
-window/size/resizable=false
-window/size/test_width=540
-window/size/test_height=1200
+window/size/width=1080
+window/size/height=2400
+window/size/test_width=360
+window/size/test_height=800
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_width"
 
 [input]
 

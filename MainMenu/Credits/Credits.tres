@@ -11,7 +11,7 @@ border_width_bottom = 1
 border_color = Color( 1, 1, 1, 1 )
 
 [sub_resource type="DynamicFont" id=1]
-size = 40
+size = 50
 font_data = ExtResource( 1 )
 
 [resource]

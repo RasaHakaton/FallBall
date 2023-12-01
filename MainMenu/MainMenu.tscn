@@ -281,8 +281,6 @@ font_data = ExtResource( 7 )
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -840.0
-margin_bottom = 1320.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -341,9 +339,9 @@ anims/Start = SubResource( 4 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -370.0
-margin_top = 150.0
+margin_top = 250.0
 margin_right = 370.0
-margin_bottom = 316.0
+margin_bottom = 416.0
 theme = ExtResource( 2 )
 text = "FallBall"
 align = 1
@@ -358,9 +356,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -300.0
-margin_top = -190.0
+margin_top = -472.0
 margin_right = 300.0
-margin_bottom = 440.0
+margin_bottom = 400.0
 theme = ExtResource( 4 )
 alignment = 1
 __meta__ = {
@@ -368,27 +366,41 @@ __meta__ = {
 }
 
 [node name="Play" type="Button" parent="VBoxContainer"]
-margin_top = 137.0
 margin_right = 600.0
-margin_bottom = 223.0
+margin_bottom = 122.0
 text = "Play"
 
-[node name="Settings" type="Button" parent="VBoxContainer"]
-margin_top = 227.0
+[node name="Control" type="Control" parent="VBoxContainer"]
+margin_top = 126.0
 margin_right = 600.0
-margin_bottom = 313.0
+margin_bottom = 371.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+visible = false
+margin_top = 472.0
+margin_right = 600.0
+margin_bottom = 594.0
 text = "Settings"
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
-margin_top = 317.0
+margin_top = 375.0
 margin_right = 600.0
-margin_bottom = 403.0
+margin_bottom = 497.0
 text = "Credits"
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
-margin_top = 407.0
+[node name="Control2" type="Control" parent="VBoxContainer"]
+margin_top = 501.0
 margin_right = 600.0
-margin_bottom = 493.0
+margin_bottom = 746.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 750.0
+margin_right = 600.0
+margin_bottom = 872.0
 text = "Quit"
 
 [node name="Settings" parent="." instance=ExtResource( 3 )]
@@ -435,12 +447,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -115.0
-margin_top = -264.0
+margin_left = -243.0
+margin_top = -274.0
 margin_right = -20.0
-margin_bottom = -200.0
+margin_bottom = -210.0
 custom_fonts/font = SubResource( 8 )
-text = "V1.1"
+text = "mobile 1.0"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -35,7 +35,7 @@ func _on_Player_body_entered(body):
 	if body.name == "Ball":
 		position.y = -100
 		#randomize()
-		position.x = rand_range(704, 1216)
+		position.x = rand_range(0, 1080)
 		spritechoose()
 		speed = speed + sfp
 		if rotspeed <= rotmax:

@@ -27,8 +27,6 @@ func load_data():
 
 func _ready():
 	load_data()
-	OS.set_window_size(sdata.resolution)
-	OS.window_fullscreen = sdata.fullscreen
 
 func _process(delta):
 	if Input.is_action_pressed("clearsave"):
